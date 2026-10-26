@@ -1,15 +1,7 @@
-/* =====================================================
-   ExploreVista — Main JavaScript
-   ===================================================== */
-
 'use strict';
-
-// ─── Utility ───────────────────────────────────────────────────────────────
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
-
-// ─── 1. Navbar scroll behaviour ────────────────────────────────────────────
 
 function initNavbar() {
   const navbar = $('.ev-navbar');
@@ -30,7 +22,6 @@ function initNavbar() {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Close mobile menu on link click
   $$('.ev-navbar .nav-link').forEach(link => {
     link.addEventListener('click', () => {
       const collapse = $('.navbar-collapse');
@@ -41,7 +32,6 @@ function initNavbar() {
     });
   });
 
-  // Active nav link based on current page
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   $$('.ev-navbar .nav-link').forEach(link => {
     const href = link.getAttribute('href');
@@ -51,27 +41,21 @@ function initNavbar() {
   });
 }
 
-// ─── 2. Hero image parallax + load animation ───────────────────────────────
-
 function initHero() {
   const heroBg = $('.ev-hero-bg');
   if (heroBg) {
-    // Trigger zoom-out animation once image is loaded
     const img = new Image();
     img.onload = () => heroBg.classList.add('loaded');
     const bgUrl = getComputedStyle(heroBg).backgroundImage.match(/url\(["']?(.+?)["']?\)/)?.[1];
     if (bgUrl) img.src = bgUrl;
     else heroBg.classList.add('loaded');
 
-    // Subtle parallax
     window.addEventListener('scroll', () => {
       const offset = window.scrollY * 0.3;
       heroBg.style.transform = `scale(1) translateY(${offset}px)`;
     }, { passive: true });
   }
 }
-
-// ─── 3. Scroll reveal (fade-in-up) ─────────────────────────────────────────
 
 function initScrollReveal() {
   const items = $$('.fade-in-up');
@@ -97,8 +81,6 @@ function initScrollReveal() {
     observer.observe(el);
   });
 }
-
-// ─── 4. Destination search / filter ────────────────────────────────────────
 
 function initDestinationFilter() {
   const searchInput = $('#dest-search');
@@ -153,8 +135,6 @@ function initDestinationFilter() {
   }
 }
 
-// ─── 4b. Gallery filter ───────────────────────────────────────────────────
-
 function initGalleryFilter() {
   const filterTabs = $$('.filter-tabs .filter-tab');
   const items = $$('.gallery-card-wrap');
@@ -179,8 +159,6 @@ function initGalleryFilter() {
     });
   });
 }
-
-// ─── 4c. Hotels filter ────────────────────────────────────────────────────
 
 function initHotelFilter() {
   const filterTabs = $$('.filter-tabs .filter-tab');
@@ -207,8 +185,6 @@ function initHotelFilter() {
   });
 }
 
-// ─── 5. Homepage hero search ────────────────────────────────────────────────
-
 function initHeroSearch() {
   const form = $('#hero-search-form');
   if (!form) return;
@@ -220,7 +196,6 @@ function initHeroSearch() {
     }
   });
 
-  // Pre-populate on destinations page
   if (window.location.pathname.includes('destinations')) {
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q');
@@ -238,8 +213,6 @@ function initHeroSearch() {
     }
   }
 }
-
-// ─── 6. Gallery lightbox ───────────────────────────────────────────────────
 
 function initLightbox() {
   const items = $$('.gallery-item[data-src]');
@@ -328,8 +301,6 @@ function initLightbox() {
   });
 }
 
-// ─── 7. Contact form validation ────────────────────────────────────────────
-
 function initContactForm() {
   const form = $('#contact-form');
   if (!form) return;
@@ -361,7 +332,6 @@ function initContactForm() {
     return ok;
   }
 
-  // Live validation
   $$('input, textarea, select', form).forEach(field => {
     field.addEventListener('blur', () => validate(field));
     field.addEventListener('input', () => {
@@ -379,7 +349,6 @@ function initContactForm() {
       return;
     }
 
-    // Simulate submission
     const submitBtn = $('#form-submit');
     if (submitBtn) {
       submitBtn.disabled = true;
@@ -388,7 +357,6 @@ function initContactForm() {
 
     setTimeout(() => {
       form.reset();
-      // Clear error states if any
       fields.forEach(f => {
         f.classList.remove('is-invalid');
         f.setAttribute('aria-invalid', 'false');
@@ -409,8 +377,6 @@ function initContactForm() {
   });
 }
 
-// ─── 8. Scroll-to-top button ───────────────────────────────────────────────
-
 function initScrollTop() {
   const btn = $('#scroll-top-btn');
   if (!btn) return;
@@ -419,8 +385,6 @@ function initScrollTop() {
   }, { passive: true });
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
-
-// ─── 9. Smooth scroll for anchor links ────────────────────────────────────
 
 function initSmoothScroll() {
   $$('a[href^="#"]').forEach(link => {
@@ -435,8 +399,6 @@ function initSmoothScroll() {
     });
   });
 }
-
-// ─── 10. Animated stat counter ────────────────────────────────────────────
 
 function initStatCounter() {
   const stats = $$('.stat-num[data-target]');
@@ -472,8 +434,6 @@ function initStatCounter() {
   stats.forEach(el => observer.observe(el));
 }
 
-// ─── 11. Navbar mobile collapse auto-close on outside click ───────────────
-
 function initNavCollapse() {
   document.addEventListener('click', e => {
     const collapse = $('.navbar-collapse');
@@ -485,8 +445,6 @@ function initNavCollapse() {
     }
   });
 }
-
-// ─── Init all ──────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();

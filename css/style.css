@@ -1,20 +1,16 @@
-/* =====================================================
-   ExploreVista — Main Stylesheet
-   Design System: Forest Green + Warm White + Gold
-   ===================================================== */
+/* ExploreVista Stylesheet */
 
-/* --- Google Fonts Import --- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* --- CSS Custom Properties (Design Tokens) --- */
+/* Design Tokens */
 :root {
-  --color-primary:       #1a4731;   /* Deep forest green */
+  --color-primary:       #1a4731;
   --color-primary-light: #2d6a4f;
   --color-primary-dark:  #0f2e1e;
-  --color-accent:        #b5891a;   /* Muted gold */
+  --color-accent:        #b5891a;
   --color-accent-light:  #d4a843;
-  --color-teal:          #2a7b7b;   /* Restrained teal */
-  --color-bg:            #faf8f4;   /* Warm white */
+  --color-teal:          #2a7b7b;
+  --color-bg:            #faf8f4;
   --color-bg-card:       #ffffff;
   --color-bg-section:    #f3efe8;
   --color-text:          #1c1c1c;
@@ -42,7 +38,7 @@
   --max-width: 1280px;
 }
 
-/* --- Reset & Base --- */
+/* Base */
 *,
 *::before,
 *::after {
@@ -79,7 +75,7 @@ a:hover {
   color: var(--color-primary-light);
 }
 
-/* --- Skip Link (Accessibility) --- */
+/* Skip Link */
 .skip-link {
   position: absolute;
   top: -80px;
@@ -101,7 +97,7 @@ a:hover {
   outline: 2px solid var(--color-accent);
 }
 
-/* --- Utility Classes --- */
+/* Utilities */
 .text-accent    { color: var(--color-accent); }
 .text-primary   { color: var(--color-primary); }
 .text-muted-custom { color: var(--color-text-muted); }
@@ -109,7 +105,7 @@ a:hover {
 .section-pad    { padding: 80px 0; }
 .section-pad-sm { padding: 56px 0; }
 
-/* --- Typography --- */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   line-height: 1.25;
@@ -142,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-/* --- Buttons --- */
+/* Buttons */
 .btn-ev-primary {
   display: inline-flex;
   align-items: center;
@@ -245,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
-/* --- Navigation --- */
+/* Navigation */
 .ev-navbar {
   position: fixed;
   top: 0;
@@ -303,12 +299,11 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255,255,255,0.85%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Transparent nav for hero pages */
 .ev-navbar.hero-nav {
   background-color: transparent;
 }
 
-/* --- Hero Section --- */
+/* Hero */
 .ev-hero {
   position: relative;
   min-height: 100vh;
@@ -391,7 +386,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-/* --- Search Bar --- */
+/* Search Bar */
 .ev-search-bar {
   background: #fff;
   border-radius: 50px;
@@ -442,7 +437,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-1px);
 }
 
-/* Search section below hero */
 .search-section {
   background-color: var(--color-primary);
   padding: 28px 0;
@@ -452,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 680px;
 }
 
-/* --- Stats Strip --- */
+/* Stats */
 .stats-strip {
   background-color: var(--color-bg-section);
   border-top: 1px solid var(--color-border);
@@ -463,7 +457,6 @@ h1, h2, h3, h4, h5, h6 {
 .stat-item {
   text-align: center;
   padding: 10px 20px;
-  /* Stats always visible, no fade needed */
   opacity: 1 !important;
   transform: none !important;
 }
@@ -484,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-/* --- Destination Cards --- */
+/* Destination Cards */
 .dest-card {
   background: var(--color-bg-card);
   border-radius: var(--radius-lg);
@@ -611,7 +604,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* --- Category Filter Tabs --- */
+/* Category Filter Tabs */
 .filter-tabs {
   display: flex;
   gap: 10px;
@@ -644,7 +637,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* --- Category Cards (Homepage) --- */
+/* Category Cards */
 .category-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
@@ -696,7 +689,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-/* --- Map Section --- */
+/* Interactive Map */
 .map-section {
   background-color: var(--color-bg-section);
   padding: 80px 0;
@@ -725,7 +718,6 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 40px 40px;
 }
 
-/* Map grid lines */
 .map-placeholder::after {
   content: '';
   position: absolute;
@@ -796,7 +788,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-muted);
 }
 
-/* Map destination pins */
 .map-pin {
   position: absolute;
   z-index: 3;
@@ -832,7 +823,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-sm);
 }
 
-/* --- Gallery --- */
+/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -976,7 +967,7 @@ h1, h2, h3, h4, h5, h6 {
 .ev-lightbox-prev { left: 20px; }
 .ev-lightbox-next { right: 20px; }
 
-/* --- Hotel Cards --- */
+/* Hotel Cards */
 .hotel-card {
   background: var(--color-bg-card);
   border-radius: var(--radius-lg);
@@ -1103,7 +1094,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: auto;
 }
 
-/* --- FAQ Accordion Custom Styling --- */
+/* FAQ Accordion */
 .accordion-item {
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border);
@@ -1144,7 +1135,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 18px 20px;
 }
 
-/* --- Contact Page --- */
+/* Contact Page */
 .contact-hero {
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
   padding: 120px 0 60px;
@@ -1197,7 +1188,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-muted);
 }
 
-/* Form Styling */
 .ev-form-label {
   font-weight: 600;
   font-size: 0.85rem;
@@ -1288,7 +1278,7 @@ textarea.ev-form-control {
   transform: translateY(-3px);
 }
 
-/* --- About / Intro Section --- */
+/* About Section */
 .intro-section {
   background-color: var(--color-bg-section);
 }
@@ -1330,7 +1320,7 @@ textarea.ev-form-control {
   letter-spacing: 0.05em;
 }
 
-/* --- Testimonials --- */
+/* Testimonials */
 .testimonial-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
@@ -1382,7 +1372,7 @@ textarea.ev-form-control {
   color: var(--color-text-muted);
 }
 
-/* --- Page Hero (inner pages) --- */
+/* Page Hero */
 .page-hero {
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
   padding: 120px 0 64px;
@@ -1432,7 +1422,7 @@ textarea.ev-form-control {
   color: var(--color-accent-light);
 }
 
-/* --- Footer --- */
+/* Footer */
 .ev-footer {
   background-color: var(--color-primary-dark);
   color: rgba(255,255,255,0.75);
@@ -1585,7 +1575,7 @@ textarea.ev-form-control {
   color: var(--color-accent-light);
 }
 
-/* --- CTA Band --- */
+/* CTA Band */
 .cta-band {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-teal) 100%);
   padding: 64px 0;
@@ -1605,7 +1595,7 @@ textarea.ev-form-control {
   margin: 0 auto 28px;
 }
 
-/* --- Page transitions & entrance animations --- */
+/* Animations */
 .fade-in-up {
   opacity: 0;
   transform: translateY(28px);
@@ -1617,7 +1607,7 @@ textarea.ev-form-control {
   transform: translateY(0);
 }
 
-/* --- Scroll to top button --- */
+/* Scroll to Top */
 .scroll-top-btn {
   position: fixed;
   bottom: 28px;
@@ -1653,7 +1643,7 @@ textarea.ev-form-control {
   box-shadow: var(--shadow-lg);
 }
 
-/* --- Responsive Adjustments --- */
+/* Responsive */
 @media (max-width: 992px) {
   .section-pad { padding: 60px 0; }
   .ev-hero { min-height: 90vh; }
@@ -1683,7 +1673,7 @@ textarea.ev-form-control {
   .stat-item .stat-num { font-size: 1.6rem; }
 }
 
-/* --- Accessibility Focus --- */
+/* Accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -1693,7 +1683,7 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
-/* --- Respect Reduced Motion Preferences --- */
+/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

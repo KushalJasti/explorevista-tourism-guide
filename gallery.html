@@ -14,7 +14,6 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- NAVIGATION -->
   <nav class="ev-navbar scrolled navbar navbar-expand-lg" id="main-nav" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand" href="index.html">Explore<span>Vista</span></a>
@@ -35,7 +34,6 @@
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
   <main id="main-content">
   <header class="page-hero" aria-label="Gallery page header">
     <div class="container position-relative" style="z-index:2;">
@@ -48,11 +46,9 @@
     </div>
   </header>
 
-  <!-- GALLERY -->
   <section class="section-pad" aria-label="Photo gallery">
     <div class="container">
 
-      <!-- Filter Tabs -->
       <div class="filter-tabs mb-5" role="group" aria-label="Filter gallery by destination">
         <button class="filter-tab active" data-filter="all">All Photos</button>
         <button class="filter-tab" data-filter="kashmir">Kashmir</button>
@@ -63,10 +59,8 @@
         <button class="filter-tab" data-filter="ladakh">Ladakh</button>
       </div>
 
-      <!-- Gallery Grid -->
       <div class="gallery-grid" id="gallery-grid">
 
-        <!-- Kashmir photos -->
         <div class="gallery-item fade-in-up gallery-card-wrap" data-category="kashmir"
           data-src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=1200&q=90&auto=format&fit=crop"
           data-caption="Dal Lake, Kashmir — the crown of India's north"
@@ -95,7 +89,6 @@
           </div>
         </div>
 
-        <!-- Goa photos -->
         <div class="gallery-item fade-in-up gallery-card-wrap" data-category="goa"
           data-src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=90&auto=format&fit=crop"
           data-caption="Goa's palm-lined beaches — sun, sea and serenity"
@@ -124,7 +117,6 @@
           </div>
         </div>
 
-        <!-- Manali photos -->
         <div class="gallery-item fade-in-up gallery-card-wrap" data-category="manali"
           data-src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=90&auto=format&fit=crop"
           data-caption="Manali valley — rugged Himalayan grandeur"
@@ -153,7 +145,6 @@
           </div>
         </div>
 
-        <!-- Jaipur photos -->
         <div class="gallery-item fade-in-up gallery-card-wrap" data-category="jaipur"
           data-src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1200&q=90&auto=format&fit=crop"
           data-caption="Hawa Mahal — Jaipur's Palace of Winds"
@@ -182,7 +173,6 @@
           </div>
         </div>
 
-        <!-- Kerala photos -->
         <div class="gallery-item fade-in-up gallery-card-wrap" data-category="kerala"
           data-src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=90&auto=format&fit=crop"
           data-caption="Kerala backwaters — the still, green labyrinth"
@@ -211,7 +201,6 @@
           </div>
         </div>
 
-        <!-- Ladakh photos -->
         <div class="gallery-item fade-in-up gallery-card-wrap" data-category="ladakh"
           data-src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=1200&q=90&auto=format&fit=crop"
           data-caption="Ladakh monastery — ancient faith above the clouds"
@@ -240,11 +229,10 @@
           </div>
         </div>
 
-      </div><!-- end gallery-grid -->
+      </div>
     </div>
   </section>
 
-  <!-- LIGHTBOX -->
   <div class="ev-lightbox" id="ev-lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
     <button class="ev-lightbox-close" id="lightbox-close" aria-label="Close lightbox">
       <i class="bi bi-x-lg" aria-hidden="true"></i>
@@ -259,7 +247,6 @@
     <div class="ev-lightbox-caption" id="lightbox-caption"></div>
   </div>
 
-  <!-- CTA -->
   <section class="cta-band" aria-label="Explore destinations CTA">
     <div class="container fade-in-up">
       <h2>Inspired to Travel?</h2>
@@ -269,7 +256,6 @@
   </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="ev-footer" aria-label="Site footer">
     <div class="container">
       <div class="row g-5">
@@ -325,32 +311,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
-
-  <!-- Gallery-specific filter -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabs = document.querySelectorAll('.filter-tab');
-      const items = document.querySelectorAll('.gallery-card-wrap');
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          const filter = tab.dataset.filter;
-          items.forEach(item => {
-            const match = filter === 'all' || item.dataset.category === filter;
-            item.style.display = match ? '' : 'none';
-          });
-        });
-      });
-
-      // Keyboard-accessible lightbox trigger
-      document.querySelectorAll('.gallery-item[role="button"]').forEach(el => {
-        el.addEventListener('keydown', e => {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
