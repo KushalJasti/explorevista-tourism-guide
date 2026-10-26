@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ExploreVista — Discover India's most breathtaking destinations. Premium travel guides for Kashmir, Goa, Manali, Jaipur, Kerala, and Ladakh." />
+  <title>ExploreVista — Discover India's Most Beautiful Destinations</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ══════════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════ -->
+  <nav class="ev-navbar hero-nav navbar navbar-expand-lg" data-hero="true" id="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        Explore<span>Vista</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navMenu" aria-controls="navMenu"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════════════ -->
+  <main id="main-content">
+  <section class="ev-hero" id="hero" aria-label="Hero section">
+    <div class="ev-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1800&q=85&auto=format&fit=crop');"></div>
+    <div class="ev-hero-overlay"></div>
+    <div class="container ev-hero-content">
+      <div class="row">
+        <div class="col-lg-7 col-xl-6">
+          <span class="ev-hero-label">✦ Your Journey Begins Here</span>
+          <h1 class="ev-hero-title">
+            Discover India's<br>
+            <span class="accent-word">Hidden Wonders</span>
+          </h1>
+          <p class="ev-hero-subtitle">
+            From the snow-capped peaks of Ladakh to the golden shores of Goa — curated travel experiences that inspire and delight.
+          </p>
+          <div class="ev-hero-actions">
+            <a href="destinations.html" class="btn-ev-primary">
+              <i class="bi bi-compass"></i> Explore Destinations
+            </a>
+            <a href="gallery.html" class="btn-white">
+              <i class="bi bi-images"></i> View Gallery
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SEARCH SECTION
+  ══════════════════════════════════════════════════ -->
+  <section class="search-section" aria-label="Destination search">
+    <div class="container">
+      <form class="ev-search-bar" id="hero-search-form" role="search" aria-label="Search destinations">
+        <i class="bi bi-search search-icon" aria-hidden="true"></i>
+        <input type="search" id="hero-search-input" placeholder="Search destinations — Kashmir, Goa, Manali…"
+          aria-label="Search destinations" autocomplete="off" />
+        <button type="submit" aria-label="Search">
+          Search
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       STATS STRIP
+  ══════════════════════════════════════════════════ -->
+  <section class="stats-strip" aria-label="Key statistics">
+    <div class="container">
+      <div class="row justify-content-center text-center g-0">
+        <div class="col-6 col-sm-3">
+          <div class="stat-item fade-in-up">
+            <span class="stat-num" data-target="50" data-suffix="+">50+</span>
+            <span class="stat-label">Destinations</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="stat-item fade-in-up">
+            <span class="stat-num" data-target="12000" data-suffix="+">12,000+</span>
+            <span class="stat-label">Happy Travellers</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="stat-item fade-in-up">
+            <span class="stat-num" data-target="200" data-suffix="+">200+</span>
+            <span class="stat-label">Curated Hotels</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="stat-item fade-in-up">
+            <span class="stat-num" data-target="4.9" data-suffix="★">4.9★</span>
+            <span class="stat-label">Average Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FEATURED DESTINATIONS
+  ══════════════════════════════════════════════════ -->
+  <section class="section-pad" id="destinations" aria-label="Featured destinations">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-md-8">
+          <span class="section-label">Featured Destinations</span>
+          <h2 class="section-title">India's Most Beloved Places</h2>
+          <p class="section-subtitle">Handpicked gems across the subcontinent — each one a story waiting to be told.</p>
+        </div>
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <a href="destinations.html" class="btn-ev-outline">
+            View All <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Kashmir -->
+        <div class="col-md-6 col-lg-4 fade-in-up">
+          <article class="dest-card">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=600&q=80&auto=format&fit=crop"
+                alt="Dal Lake, Kashmir — snow-capped mountains reflected in serene waters"
+                loading="lazy" />
+              <span class="dest-card-badge">Mountain</span>
+              <span class="dest-card-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-card-location"><i class="bi bi-geo-alt"></i> Jammu & Kashmir</div>
+              <h3 class="dest-card-title">Kashmir</h3>
+              <p class="dest-card-desc">Where snow-capped peaks cradle shimmering Dal Lake and the fragrance of chinar trees fills the crisp mountain air.</p>
+              <div class="dest-card-footer">
+                <a href="destinations.html#kashmir" class="dest-card-link">
+                  Explore More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Goa -->
+        <div class="col-md-6 col-lg-4 fade-in-up">
+          <article class="dest-card">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80&auto=format&fit=crop"
+                alt="Goa beach with palm trees and golden sunset"
+                loading="lazy" />
+              <span class="dest-card-badge">Beach</span>
+              <span class="dest-card-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-card-location"><i class="bi bi-geo-alt"></i> Goa, India</div>
+              <h3 class="dest-card-title">Goa</h3>
+              <p class="dest-card-desc">Sun-drenched beaches, vibrant nightlife, and Portuguese colonial architecture blend into India's most beloved coastal paradise.</p>
+              <div class="dest-card-footer">
+                <a href="destinations.html#goa" class="dest-card-link">
+                  Explore More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Manali -->
+        <div class="col-md-6 col-lg-4 fade-in-up">
+          <article class="dest-card">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80&auto=format&fit=crop"
+                alt="Manali mountain landscape with pine forests and snow"
+                loading="lazy" />
+              <span class="dest-card-badge">Adventure</span>
+              <span class="dest-card-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-card-location"><i class="bi bi-geo-alt"></i> Himachal Pradesh</div>
+              <h3 class="dest-card-title">Manali</h3>
+              <p class="dest-card-desc">A gateway to the Himalayas, Manali dazzles with river valleys, pine-clad slopes, and thrilling adventure sports year-round.</p>
+              <div class="dest-card-footer">
+                <a href="destinations.html#manali" class="dest-card-link">
+                  Explore More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Jaipur -->
+        <div class="col-md-6 col-lg-4 fade-in-up">
+          <article class="dest-card">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=80&auto=format&fit=crop"
+                alt="Hawa Mahal, Jaipur — the iconic pink palace facade"
+                loading="lazy" />
+              <span class="dest-card-badge">Heritage</span>
+              <span class="dest-card-rating"><i class="bi bi-star-fill"></i> 4.7</span>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-card-location"><i class="bi bi-geo-alt"></i> Rajasthan</div>
+              <h3 class="dest-card-title">Jaipur</h3>
+              <p class="dest-card-desc">The Pink City enchants with maharaja palaces, bustling bazaars, and Rajasthani cuisine that leaves you longing for more.</p>
+              <div class="dest-card-footer">
+                <a href="destinations.html#jaipur" class="dest-card-link">
+                  Explore More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Kerala -->
+        <div class="col-md-6 col-lg-4 fade-in-up">
+          <article class="dest-card">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80&auto=format&fit=crop"
+                alt="Kerala backwaters with traditional houseboat"
+                loading="lazy" />
+              <span class="dest-card-badge">Nature</span>
+              <span class="dest-card-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-card-location"><i class="bi bi-geo-alt"></i> Kerala, India</div>
+              <h3 class="dest-card-title">Kerala</h3>
+              <p class="dest-card-desc">God's Own Country — lush backwaters, spice-scented hills, ayurvedic retreats and pristine beaches await you.</p>
+              <div class="dest-card-footer">
+                <a href="destinations.html#kerala" class="dest-card-link">
+                  Explore More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Ladakh -->
+        <div class="col-md-6 col-lg-4 fade-in-up">
+          <article class="dest-card">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=600&q=80&auto=format&fit=crop"
+                alt="Ladakh monastery perched on a rocky mountain"
+                loading="lazy" />
+              <span class="dest-card-badge">Spiritual</span>
+              <span class="dest-card-rating"><i class="bi bi-star-fill"></i> 5.0</span>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-card-location"><i class="bi bi-geo-alt"></i> Ladakh, India</div>
+              <h3 class="dest-card-title">Ladakh</h3>
+              <p class="dest-card-desc">Earth's rooftop — barren landscapes of surreal beauty, ancient monasteries, and some of the world's highest roads.</p>
+              <div class="dest-card-footer">
+                <a href="destinations.html#ladakh" class="dest-card-link">
+                  Explore More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       TRAVEL CATEGORIES
+  ══════════════════════════════════════════════════ -->
+  <section class="section-pad bg-section" id="categories" aria-label="Travel categories"
+    style="background-color: var(--color-bg-section);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Browse by Category</span>
+        <h2 class="section-title">What Kind of Traveller Are You?</h2>
+      </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-sm-4 col-lg-2 fade-in-up">
+          <a href="destinations.html?cat=mountain" class="text-decoration-none">
+            <div class="category-card">
+              <div class="cat-icon"><i class="bi bi-snow" aria-hidden="true"></i></div>
+              <h3>Mountain</h3>
+              <p>Peaks &amp; Valleys</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2 fade-in-up">
+          <a href="destinations.html?cat=beach" class="text-decoration-none">
+            <div class="category-card">
+              <div class="cat-icon"><i class="bi bi-water" aria-hidden="true"></i></div>
+              <h3>Beach</h3>
+              <p>Coasts &amp; Shores</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2 fade-in-up">
+          <a href="destinations.html?cat=heritage" class="text-decoration-none">
+            <div class="category-card">
+              <div class="cat-icon"><i class="bi bi-building-fill" aria-hidden="true"></i></div>
+              <h3>Heritage</h3>
+              <p>Forts &amp; Palaces</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2 fade-in-up">
+          <a href="destinations.html?cat=nature" class="text-decoration-none">
+            <div class="category-card">
+              <div class="cat-icon"><i class="bi bi-tree-fill" aria-hidden="true"></i></div>
+              <h3>Nature</h3>
+              <p>Forests &amp; Lakes</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2 fade-in-up">
+          <a href="destinations.html?cat=adventure" class="text-decoration-none">
+            <div class="category-card">
+              <div class="cat-icon"><i class="bi bi-lightning-fill" aria-hidden="true"></i></div>
+              <h3>Adventure</h3>
+              <p>Thrills &amp; Sports</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2 fade-in-up">
+          <a href="destinations.html?cat=spiritual" class="text-decoration-none">
+            <div class="category-card">
+              <div class="cat-icon"><i class="bi bi-peace-fill" aria-hidden="true"></i></div>
+              <h3>Spiritual</h3>
+              <p>Temples &amp; Peace</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       ABOUT / INTRO SECTION
+  ══════════════════════════════════════════════════ -->
+  <section class="section-pad intro-section" id="about" aria-label="About ExploreVista">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 fade-in-up">
+          <div class="intro-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80&auto=format&fit=crop"
+              alt="Panoramic mountain landscape representing India's natural beauty"
+              loading="lazy" />
+            <div class="intro-badge">
+              <strong>10+</strong>
+              <span>Years of Travel Expertise</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 fade-in-up">
+          <span class="section-label">Who We Are</span>
+          <h2 class="section-title">India's Trusted Travel Companion</h2>
+          <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 20px;">
+            ExploreVista was born from a simple belief — every corner of India has a story to tell, and every traveller deserves to find theirs. We curate the finest destinations, hidden gems, and cultural experiences across the subcontinent.
+          </p>
+          <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 32px;">
+            Whether you're chasing snowfall in Manali, sunsets in Goa, or monasteries in Ladakh, our handpicked guides, authentic photography, and expert tips ensure you travel smarter and experience more.
+          </p>
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width:40px;height:40px;background:rgba(26,71,49,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex-shrink:0;">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <span style="font-size:.88rem;font-weight:600;color:var(--color-text);">Verified Destinations</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width:40px;height:40px;background:rgba(26,71,49,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex-shrink:0;">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <span style="font-size:.88rem;font-weight:600;color:var(--color-text);">Expert Travel Guides</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width:40px;height:40px;background:rgba(26,71,49,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex-shrink:0;">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <span style="font-size:.88rem;font-weight:600;color:var(--color-text);">Authentic Imagery</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width:40px;height:40px;background:rgba(26,71,49,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex-shrink:0;">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <span style="font-size:.88rem;font-weight:600;color:var(--color-text);">Free Travel Resources</span>
+              </div>
+            </div>
+          </div>
+          <a href="destinations.html" class="btn-ev-primary">Start Exploring <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       MAP PREVIEW SECTION
+  ══════════════════════════════════════════════════ -->
+  <section class="map-section" id="map-view" aria-label="Destination map preview">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="section-label">Explore the Map</span>
+        <h2 class="section-title">Where Will You Go Next?</h2>
+        <p class="section-subtitle mx-auto">All six featured destinations span the breadth of India — from the Himalayas to the southern coasts.</p>
+      </div>
+      <div class="fade-in-up">
+        <div class="map-placeholder" role="img" aria-label="Decorative map showing India's featured destinations">
+          <!-- Map pins -->
+          <div class="map-pin" style="top:12%;left:25%;" title="Kashmir">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-label">Kashmir</div>
+          </div>
+          <div class="map-pin" style="top:15%;left:38%;" title="Manali">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-label">Manali</div>
+          </div>
+          <div class="map-pin" style="top:20%;left:52%;" title="Ladakh">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-label">Ladakh</div>
+          </div>
+          <div class="map-pin" style="top:38%;left:30%;" title="Jaipur">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-label">Jaipur</div>
+          </div>
+          <div class="map-pin" style="top:72%;left:20%;" title="Goa">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-label">Goa</div>
+          </div>
+          <div class="map-pin" style="top:80%;left:35%;" title="Kerala">
+            <div class="map-pin-dot"></div>
+            <div class="map-pin-label">Kerala</div>
+          </div>
+
+          <div class="map-inner">
+            <div class="map-marker" aria-hidden="true"></div>
+            <div class="map-caption">
+              <strong>ExploreVista Travel Map</strong>
+              <span>6 curated destinations across India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════════════ -->
+  <section class="section-pad" aria-label="Traveller testimonials">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-label">Traveller Stories</span>
+        <h2 class="section-title">What Our Explorers Say</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 fade-in-up">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">ExploreVista made planning our Kashmir trip incredibly easy. The destination guides were spot-on and the photography genuinely represented what we found on the ground.</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=11" alt="Priya Sharma" class="testimonial-avatar" loading="lazy" />
+              <div>
+                <span class="testimonial-name">Priya Sharma</span>
+                <span class="testimonial-place">Delhi, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 fade-in-up">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">We discovered hidden beaches in Kerala thanks to ExploreVista's local tips. It's the kind of travel resource that feels like advice from a friend who's already been there.</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=33" alt="Arjun Mehta" class="testimonial-avatar" loading="lazy" />
+              <div>
+                <span class="testimonial-name">Arjun Mehta</span>
+                <span class="testimonial-place">Mumbai, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 fade-in-up">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">The Ladakh guide was absolutely exceptional. Every detail from road conditions to monastery timings was accurate. Our bike trip was flawless thanks to this website.</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/80?img=57" alt="Ravi Krishnan" class="testimonial-avatar" loading="lazy" />
+              <div>
+                <span class="testimonial-name">Ravi Krishnan</span>
+                <span class="testimonial-place">Bangalore, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CTA BAND
+  ══════════════════════════════════════════════════ -->
+  <section class="cta-band" aria-label="Call to action">
+    <div class="container fade-in-up">
+      <h2>Ready to Start Your Adventure?</h2>
+      <p>Thousands of travellers have discovered India's finest destinations with ExploreVista. Now it's your turn.</p>
+      <a href="destinations.html" class="btn-white me-3">
+        <i class="bi bi-compass"></i> Explore Now
+      </a>
+      <a href="contact.html" class="btn-ev-accent">
+        <i class="bi bi-envelope"></i> Get in Touch
+      </a>
+    </div>
+  </section>
+  </main>
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer class="ev-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">Explore<span>Vista</span></a>
+          <p class="footer-desc">India's premium travel guide — curating unforgettable journeys across six breathtaking destinations and beyond.</p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Follow on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow on Twitter / X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Like on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Watch on YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Connect on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6">
+          <h3 class="footer-heading">Destinations</h3>
+          <ul class="footer-links">
+            <li><a href="destinations.html#kashmir">Kashmir</a></li>
+            <li><a href="destinations.html#goa">Goa</a></li>
+            <li><a href="destinations.html#manali">Manali</a></li>
+            <li><a href="destinations.html#jaipur">Jaipur</a></li>
+            <li><a href="destinations.html#kerala">Kerala</a></li>
+            <li><a href="destinations.html#ladakh">Ladakh</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3 class="footer-heading">Get in Touch</h3>
+          <address style="font-style:normal;">
+            <div class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              <span>ExploreVista House, MG Road, Bangalore, Karnataka 560001, India</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+              <span>hello@explorevista.in</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+              <span>+91 98765 43210</span>
+            </div>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ExploreVista. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">
+    <i class="bi bi-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
